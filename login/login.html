@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="login.css">
+    <title>Projeto Joy - Login</title>
+</head>
+<body class="dark">
+    <div class="borda-roxa">
+    </div>
+    <header class="header">
+        <a href="../menu-principal/menuprincipal.html" class="logo">
+            JOY <span class="header-logo-span">System</span>
+        </a>
+        <nav class="navigation">
+            <div class="dark-mode-btn" class="dark-mode-btn">
+                <span class="material-symbols-outlined mode-off" id="mode-off">
+                    toggle_off
+                </span>
+                <span class="material-symbols-outlined mode-on" id="mode-on">
+                    toggle_on
+                </span>
+            </div>
+            
+            <div class="menu-mobile-icon"><span class="material-symbols-outlined">menu</span></div>
+        <div class="menu-mobile">
+            <ul>
+                <div class="menu-mobile-icon fechar"><span class="material-symbols-outlined">close</span></div>
+                <li class="nav-item"><a href="#">Ir para o Sistema de Projetos</a></li>
+                <li class="nav-item"><a href="#">Metas</a></li>
+                <li class="nav-item"><a href="#">Tarefas Pendentes</a></li>
+                <li class="nav-item"><a href="#">Notas</a></li>
+                <li class="nav-item"><a href="#">Seus trófeis</a></li>
+                <li class="nav-item"><a href="#">Suporte</a></li>
+                <li class="nav-item switch-light"><a href="#" class="dark-mode-btn">Dark mode/Light mode</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <main class="main-container">
+        <form action="" method="get" class="cad-box">
+            <h1 class="title">Acesse sua conta</h1>
+
+            <div class="cad-form">
+                <input type="text" name="email-input" id="input-email" class="input" placeholder="Email">
+                <input type="password" name="password" id="input-password" class="input" placeholder="Senha">
+            </div>
+
+            <input type="submit" value="ENTRAR" id="submit-input">
+
+            <p class="login-space">
+                Não tem uma conta? <a href="cadastro.html" class="switch-sides">CRIAR</a>
+            </p>
+        </form>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

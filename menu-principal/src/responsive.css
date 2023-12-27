@@ -1,0 +1,84 @@
+@media(max-width: 1080px){
+    .seta-apos-menu{
+        display: none;
+    }
+
+    .main-slide{
+        display: flex;
+        min-height: 400px;
+        flex-direction: column;
+    }
+    .main-slide .container-1{
+        text-align: center;
+    }
+    .main-slide .container-2{
+        display: none;
+    }
+    .main-slide .container-1 .subscribe-btn{
+        width: 100%;
+    }
+
+    .course-information{
+        padding-bottom: 100px;
+    }
+    .course-information .grid-container{
+        padding: 0;
+    }
+    .course-information .grid-container .grid-item p{
+        padding: 0;
+    }
+    .course-information .grid-container .grid-item h3{
+        padding: 0;
+    }
+}
+
+@media(max-width: 768px){
+    .header{
+        padding: 10px 30px 10px 30px;
+    }
+
+    .header .menu-mobile{
+        width: 70%;
+    }
+    .main-slide .container-1{
+        padding: 50px;
+    }
+
+    .course-information .grid-container{
+        grid-template-columns: 1fr;
+    }
+
+    .faq-section {
+        padding: 0 0 100px 0;
+    }
+
+    .final-footer{
+        flex-direction: column;
+    }
+
+    .final-footer .botao-cta{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 450px){
+    .main-slide .container-1 h1{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 425px){
+    .header{
+        padding: 10px 10px 10px 20px;
+    }
+
+    .header .menu-mobile{
+        height: 100%;
+    }
+
+    .footer .mid-footer{
+        padding: 20px;
+        text-align: center;
+    }
+}

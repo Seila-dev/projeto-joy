@@ -1,0 +1,328 @@
+:root{
+    --main-color: rgb(1, 68, 54);
+    --secondary-color: rgb(7, 170, 2);
+    --terciary-color: rgb(21, 255, 0);
+    --descomplica: rgb(0, 255, 98);
+    --discord: rgb(46, 47, 48);
+    --hover-bg: rgb(220, 245, 242);
+    --hover-color: rgb(4, 133, 156);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    color: black;
+}
+
+
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    min-height: 100%;
+    z-index: 2;
+}
+
+body.dark-mode .borda-roxa{
+    display: none;
+}
+
+.borda-roxa{
+    background: url('./src/onda-roxa.svg') no-repeat, url('./src/onda-azul.svg') bottom no-repeat;
+    min-width: 100%;
+    height: 105vh;
+    z-index: -1;
+    position: fixed;
+}
+
+.header{
+    background-color: transparent;
+    position: fixed;
+    padding: 80px 20%;
+    max-height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    transition: 0.1s ease-in;
+    color: black;
+}
+
+.header .logo:hover{
+    color: white;
+}
+
+.header-logo-span{
+    font-size: 18px;
+}
+
+.header .navigation{
+    display: flex;
+}
+
+.main-container{
+
+    height: calc(100vh - 58px);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-container .cad-box{
+    text-align: center;
+    width: 500px;
+}
+
+.main-container .cad-box .cad-form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px 30px 40px;
+    margin-top: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.main-container .cad-box .cad-form .input{
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 40px;
+    padding: 10px 0;
+    color: black;
+    font-size: 18px;
+}
+
+#input-password{
+    margin-bottom: 5px;
+}
+
+#label-password{
+    font-size: 12px;
+    text-align: left;
+}
+
+.input::placeholder{
+    color: black;
+    font-size: 15px;
+}
+
+#submit-input{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+#submit-input:hover{
+    background-color: rgb(1, 99, 190);
+}
+
+.login-space{
+    color: black;
+}
+
+.login-space a{
+    color: rgb(111, 0, 255);
+    border-bottom: 1px solid rgb(63, 63, 63);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/*dark mode*/
+
+body.dark-mode .main-container{
+    background: black;
+    color: white;
+}
+
+.dark-mode .cad-box .cad-form{
+    background-color: rgb(43, 46, 46);
+    margin: 20px 10px;
+}
+
+body.dark-mode .cad-box .cad-form .input{
+    color: white;
+}
+
+body.dark-mode .cad-box .cad-form .input::placeholder{
+    color: white;
+}
+
+.dark-mode .login-space{
+    color: white;
+}
+
+body.dark-mode .header .logo{
+    color: white;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.dark-mode .header .navigation .material-symbols-outlined {
+    color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.dark-mode-btn{
+    position: relative;
+    margin-right: 40px;
+}
+
+.mode-on{
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.dark-mode .mode-off{
+    visibility: hidden;
+}
+
+.dark-mode .mode-on{
+    visibility: visible;
+}
+body.dark-mode #submit-input{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+body.dark-mode .login-space a{
+    color: rgb(197, 199, 199);
+}
+
+/*Hamburguer*/
+
+.menu-mobile-icon.fechar{
+    position: relative;
+    color: white;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(170, 161, 161);
+    background-color: rgb(50, 50, 51);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-mobile-icon.fechar:hover{
+    background-color: rgb(119, 119, 119);
+}
+.menu-mobile{
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(43, 43, 43));
+    transform: translateX(150%);
+    transition: 0.35s ease-in-out;
+}
+
+.menu-mobile ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-mobile ul .nav-item a{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.menu-mobile ul .nav-item a:hover{
+    background-color: rgb(100, 100, 99);
+}
+
+.menu-mobile ul .nav-item a:after{
+    content: ">";
+    transform: scaleY(200%);
+    font-size: 10px;
+}
+
+.menu-mobile ul .nav-item.switch-light{
+    padding: 30px 80px;
+}
+.menu-mobile ul .nav-item.switch-light a{
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.menu-mobile ul .nav-item.switch-light a:after{
+    content: "";
+}
+
+.menu-mobile ul .nav-item.switch-light a:hover{
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+.menu-principal{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.menu-mobile ul li .menuprincipal:before{
+    display: inline-block;
+    content: ">";
+    transform: scaleY(200%);
+    font-size: 10px;
+}
+
+.open{
+    transform: translateX(0%);
+}
+
+/*responsivo*/
+@media (max-width: 520px){
+    body{
+        background-color: white;
+    }
+
+    body.dark-mode{
+        background-color: black;
+    }
+
+    .header{
+        padding: 20px;
+    }
+    .menu-mobile{
+        width: 100%;
+    }
+    .menu-mobile ul .nav-item.switch-light{
+        padding: 20px 30px;
+    }
+}

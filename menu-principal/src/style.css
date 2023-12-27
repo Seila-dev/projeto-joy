@@ -1,0 +1,347 @@
+.header{
+    display: flex;
+    height: 80px;
+    padding: 20px 100px;
+}
+
+.logo{
+    font-size: 28px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    color: rgb(31, 63, 56);
+    font-weight: 600;
+}
+
+.header .header-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header .header-navigation ul{
+    display: flex;
+}
+
+.header .header-navigation ul a li, 
+.header .header-navigation .header-signup-btn{
+    padding: 10px 15px;
+    transition: 0.15s;
+    border-radius: 5px;
+}
+
+.header .header-navigation ul a li:hover{
+    background-color: rgb(220, 245, 242);
+    color: rgb(4, 133, 156);
+}
+
+.header .header-navigation .header-signup-btn{
+    border: 1px solid rgb(160, 158, 158);
+    transition: 0.35s;
+}
+
+.header .header-navigation .header-signup-btn:hover{
+    background-color: rgb(32, 20, 20);
+    color: white;
+}
+
+/*Main menu*/
+.main-slide{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+    max-height: 100%;
+    margin-bottom: 80px;
+}
+
+.main-slide .container-1{
+    background: linear-gradient(to bottom, rgb(1, 68, 54), rgb(7, 87, 7));
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: white;
+    padding: 120px 120px;
+    font-size: 20px;
+}
+
+.main-slide .container-1 h1{
+    margin-bottom: 60px;
+    font-size: 75px;
+    font-weight: 400;
+    font-family: 'Cardo', sans-serif;
+}
+
+.main-slide .container-1 .main-text{
+    margin-bottom: 50px;
+}
+
+.main-slide .container-1 .subscribe-btn{
+    margin-bottom: 10px;
+    background-color: rgb(241, 241, 65);
+    color: rgb(1, 68, 54);
+    padding: 20px;
+    display: block;
+    width: 400px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main-slide .container-1 .subscribe-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transform: translateY(-20%);
+}
+
+.main-slide .container-1 .bottom-subscribe-text{
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.main-slide .container-2{
+    width: 100%;
+    display: inline-block;
+    background-image: linear-gradient(to left, transparent 10%, rgb(237, 255, 174) 98%), url('../src/images/joy-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.seta-apos-menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+    position: absolute;
+    top: 80%;
+}
+
+.seta-apos-menu img{
+    width: 160px;
+}
+
+@-webkit-keyframes downarrow {
+    0% { -webkit-transform: translateY(0) ; opacity: 0.4; }
+    100% { -webkit-transform: translateY(0.4em); opacity: 0.9; }
+}
+
+@keyframes downarrow{
+    0% { -webkit-transform: translateY(0) ; opacity: 0.4; }
+    100% { -webkit-transform: translateY(0.4em); opacity: 0.9; }
+}
+
+/*course-information Section*/
+
+.course-information{
+    position: relative;
+}
+
+
+.course-information h2{
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.course-information .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 150px 100px 150px;
+    margin-top: 40px;
+}
+
+.course-information .grid-container .grid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+.course-information .grid-container .grid-item img{
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.course-information .grid-container .grid-item p{
+    padding: 0 50px;
+}
+
+/*FAQ section*/
+.faq-section{
+    background-color: black;
+    color: white;
+    padding: 0 200px 100px 200px;
+    font-size: 21px;
+    line-height: 28px;
+    position: relative;
+}
+
+.faq-section .title.faq{
+    font-size: 37px;
+    padding: 50px 0 40px 0;
+    text-align: center;
+}
+
+.faq-section .question-list .question-item{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq-section .question-list .question-item .question,
+.faq-section .question-list .question-item .answer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.faq-section .question-list .question-item .answer{
+    background-color: rgb(7, 6, 6);
+    color: rgb(202, 202, 202);
+    border-left: 2px solid gray;
+    border-radius: 5px;
+    padding: 25px;
+    display: none;
+}
+
+.faq-section .question-list .question-item .question{
+    border-bottom: 1px solid black;
+    height: 10px;
+    padding: 40px 30px;
+    font-size: 21px;
+    transition: 0.25s ease-in-out;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.faq-section .question-list .question-item .question:hover{
+    background-color: rgb(83, 83, 83);
+}
+
+.faq-section .question-list .question-item .question::after{
+    content: "+";
+    font-size: 60px;
+    font-weight: 300;
+    transition: 0.35s ease-out;
+}
+
+.faq-section .question-list .question-item.active .question::after{
+    transform: rotate(45deg);
+}
+
+.question-list .question-item.active .answer{
+    display: block;
+}
+
+/*Footer section*/
+.footer{
+    background-color: rgb(10, 10, 58);
+    color: white;
+}
+
+
+.wave-footer .shape-fill {
+    fill: #0A0A3A;
+}
+
+.footer .logo.footer{
+    font-size: 50px;
+}
+
+.footer-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.footer-navigation .footer-social-media{
+    display: flex;
+}
+
+.footer-navigation .footer-social-media li a{
+    margin-right: 15px;
+    color: white;
+}
+
+.footer-navigation .footer-social-media li a:hover{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.mid-footer{
+    padding: 100px 0 70px 0;
+    margin: 0 50px;
+    border-bottom: 1px solid rgb(133, 133, 133);
+}
+
+.final-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.final-footer p{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.final-footer a{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 0.15s ease-in-out;
+    text-align: center;
+}
+
+.final-footer a:hover{
+    background-color: rgb(189, 188, 188);
+}
+
+/*curvas BACKGROUND*/
+.wave {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    outline: none;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 129px;
+}
+
+.wave .shape-fill {
+    fill: #000000;
+}
+
+.wave-footer {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-footer svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
